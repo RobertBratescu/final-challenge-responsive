@@ -1,8 +1,96 @@
+/* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 body {
@@ -11,27 +99,76 @@ body {
 }
 
 nav {
+  min-height: 50px;
   background-color: #2e323f;
 }
 
 nav .nav_link {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
+  text-decoration: none;
+  padding: 5px 0;
 }
 
-nav .flex {
-  -webkit-box-orient: horizontal;
+nav .container {
+  min-height: inherit;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 3vw;
+  gap: 2vw;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+@media screen and (min-width: 700px) {
+  nav .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+nav .nav_link:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  nav .nav_link:nth-child(1) {
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+nav .nav_link:nth-child(5) {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 700px) {
+  nav .nav_link:nth-child(5) {
+    margin: 0;
+  }
+}
+
+nav .nav_link:nth-child(6) {
+  border-radius: 20px;
+  background-color: #a59678;
+  padding: 3px 20px;
+}
+
+nav .nav_link:nth-child(6):hover {
+  background-color: #000000;
 }
 
 header {
@@ -39,24 +176,39 @@ header {
   min-height: 700px;
 }
 
-header .flex {
+header .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   text-align: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10vw;
+  min-height: inherit;
+  padding: 15vw 3vw;
 }
 
-header .container {
-  min-height: inherit;
-  padding: 0 2vw;
+@media screen and (min-width: 1000px) {
+  header .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    text-align: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 2vw;
+  }
 }
 
 header .container h1 {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-size: 90px;
   font-weight: bold;
   color: white;
@@ -72,24 +224,41 @@ header .container > div {
 }
 
 header .container > div.flex {
-  gap: 10%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5vw;
+}
+
+@media screen and (min-width: 1000px) {
+  header .container > div.flex {
+    -ms-flex-preferred-size: 90em;
+        flex-basis: 90em;
+    gap: 2vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 header .container > div p {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: 24px;
   font-weight: 400;
   color: white;
 }
 
 header .container > div a {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -100,5 +269,245 @@ header .container > div a {
   display: inline-block;
   width: auto;
   text-transform: uppercase;
+}
+
+header .container > div a:hover {
+  background-color: #2e323f;
+}
+
+section.benefits {
+  background-color: #f0f0f0;
+  padding: 50px 0;
+}
+
+section.benefits .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5vw;
+  padding: 0 5vw;
+}
+
+@media screen and (min-width: 1000px) {
+  section.benefits .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+section.benefits .benefit {
+  text-align: center;
+  max-width: 60%;
+}
+
+section.benefits .benefit h3 {
+  font-family: 'Oswald';
+  font-size: 30px;
+  font-weight: bold;
+  color: #a59678;
+  margin-bottom: 10px;
+}
+
+section.benefits .benefit p {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 400;
+  color: #3b4050;
+}
+
+section.main {
+  background-color: white;
+}
+
+section.main .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 5vw 30px 5vw;
+}
+
+section.main .container .description {
+  padding: 30px 0;
+}
+
+section.main .container .description h3 {
+  font-family: 'Oswald';
+  font-size: 36px;
+  font-weight: bold;
+  color: #a59678;
+  margin-bottom: 15px;
+}
+
+section.main .container .description p {
+  font-family: 'Montserrat';
+  font-size: 21px;
+  font-weight: 400;
+  color: #3b4050;
+}
+
+section.main .container .description img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+section.main .container .stuff {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5vw;
+  padding: 40px 0;
+}
+
+@media screen and (min-width: 700px) {
+  section.main .container .stuff {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 20px 0;
+    gap: 3vw;
+  }
+}
+
+section.main .container .stuff .st {
+  background-color: #2e323f;
+  text-align: center;
+  padding: 50px;
+  width: 65%;
+}
+
+@media screen and (min-width: 700px) {
+  section.main .container .stuff .st {
+    padding: 30px;
+  }
+}
+
+section.main .container .stuff .st h3 {
+  font-family: 'Oswald';
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+section.main .container .stuff .st p {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+footer {
+  background-color: #2e323f;
+  padding: 50px 0;
+}
+
+footer .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4vw;
+}
+
+footer .container h3 {
+  font-family: 'Oswald';
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+footer .container .footer-cols {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  footer .container .footer-cols {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 1vw;
+  }
+  footer .container .footer-cols .footer-col:nth-child(1) {
+    -ms-flex-preferred-size: 55em;
+        flex-basis: 55em;
+    margin-right: 5vw;
+  }
+  footer .container .footer-cols .footer-col {
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  footer .container .footer-cols .footer-col p,
+  footer .container .footer-cols .footer-col h3 {
+    text-align: left !important;
+  }
+}
+
+footer .container .footer-cols .footer-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+footer .container .footer-cols .footer-col h4 {
+  font-family: 'Oswald';
+  font-size: 21px;
+  font-weight: bold;
+  color: #a59678;
+  margin-bottom: 20px;
+}
+
+footer .container .footer-cols .footer-col p {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 400;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
