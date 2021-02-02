@@ -9,4 +9,96 @@ body {
   background-color: #000000;
   font-size: 20px;
 }
+
+nav {
+  background-color: #2e323f;
+}
+
+nav .nav_link {
+  font-family: "Oswald";
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+nav .flex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #3b4050;
+  min-height: 700px;
+}
+
+header .flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+header .container {
+  min-height: inherit;
+  padding: 0 2vw;
+}
+
+header .container h1 {
+  font-family: "Oswald";
+  font-size: 90px;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
+header .container h1 span {
+  color: #a59678;
+}
+
+header .container > div {
+  padding: 0 2vw;
+}
+
+header .container > div.flex {
+  gap: 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+header .container > div p {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+}
+
+header .container > div a {
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  background-color: #a59678;
+  padding: 3px 40px;
+  display: inline-block;
+  width: auto;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=style.css.map */

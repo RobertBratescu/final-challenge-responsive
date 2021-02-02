@@ -13,6 +13,7 @@ $medium: 1000px;
   font-family: "Oswald";
   font-size: 18px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 @mixin font2 {
   font-family: "Oswald";
@@ -80,4 +81,63 @@ $medium: 1000px;
 body {
   background-color: #000000;
   font-size: 20px;
+}
+
+nav {
+  background-color: $black;
+  .nav_link {
+    @include font1;
+    color: white;
+  }
+  .flex {
+    flex-flow: row nowrap;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-color: $dark;
+  min-height: 700px;
+  .flex {
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .container {
+    min-height: inherit;
+    padding: 0 2vw;
+    h1 {
+      @include font2;
+      color: white;
+      span {
+        color: $gold;
+      }
+      line-height: 1;
+    }
+    & > div {
+      padding: 0 2vw;
+      &.flex {
+        gap: 10%;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+      }
+      p {
+        @include font3;
+        color: white;
+      }
+      a {
+        @include font4;
+        text-decoration: none;
+        color: white;
+        border-radius: 20px;
+        background-color: $gold;
+        padding: 3px 40px;
+        display: inline-block;
+        width: auto;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
