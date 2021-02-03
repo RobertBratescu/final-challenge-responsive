@@ -1,4 +1,4 @@
-@import '_reset';
+@import "_reset";
 
 $black: #2e323f;
 $dark: #3b4050;
@@ -10,334 +10,342 @@ $small: 700px;
 $medium: 1000px;
 
 @mixin small {
-	@media screen and (min-width: $small) {
-		@content;
-	}
+  @media screen and (min-width: $small) {
+    @content;
+  }
 }
 @mixin medium {
-	@media screen and (min-width: $medium) {
-		@content;
-	}
+  @media screen and (min-width: $medium) {
+    @content;
+  }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 @mixin font1 {
-	font-family: 'Oswald';
-	font-size: 18px;
-	font-weight: bold;
-	text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 @mixin font2 {
-	font-family: 'Oswald';
-	font-size: 90px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 90px;
+  font-weight: bold;
 }
 @mixin font3 {
-	font-family: 'Montserrat';
-	font-size: 24px;
-	font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 400;
 }
 @mixin font4 {
-	font-family: 'Oswald';
-	font-size: 24px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: bold;
 }
 @mixin font5 {
-	font-family: 'Oswald';
-	font-size: 30px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 30px;
+  font-weight: bold;
 }
 @mixin font5p {
-	font-family: 'Montserrat';
-	font-size: 18px;
-	font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
 }
 @mixin font6 {
-	font-family: 'Oswald';
-	font-size: 36px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 36px;
+  font-weight: bold;
 }
 @mixin font6p {
-	font-family: 'Montserrat';
-	font-size: 21px;
-	font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 21px;
+  font-weight: 400;
 }
 @mixin font7 {
-	font-family: 'Oswald';
-	font-size: 30px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 30px;
+  font-weight: bold;
 }
 @mixin font7p {
-	font-family: 'Montserrat';
-	font-size: 18px;
-	font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
 }
 @mixin font8 {
-	font-family: 'Oswald';
-	font-size: 50px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 50px;
+  font-weight: bold;
 }
 @mixin font9 {
-	font-family: 'Oswald';
-	font-size: 21px;
-	font-weight: bold;
+  font-family: "Oswald";
+  font-size: 21px;
+  font-weight: bold;
 }
 @mixin font9p {
-	font-family: 'Montserrat';
-	font-size: 16px;
-	font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
 }
 .flex {
-	display: flex;
+  display: flex;
 }
 .container {
-	max-width: 1200px;
-	margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 body {
-	background-color: #000000;
-	font-size: 20px;
+  background-color: #000000;
+  font-size: 20px;
 }
 
 nav {
-	min-height: 50px;
-	background-color: $black;
-	.nav_link {
-		@include font1;
-		color: white;
-		text-decoration: none;
-		padding: 5px 0;
-	}
-	.container {
-		min-height: inherit;
-		flex-flow: column nowrap;
-		align-items: center;
-		justify-content: space-around;
-		padding: 15px 3vw;
-		gap: 2vw;
-		@include small {
-			flex-flow: row nowrap;
-			justify-content: flex-end;
-		}
-	}
-	.nav_link:nth-child(1) {
-		margin-bottom: 10px;
-		@include small {
-			margin: 0;
-			margin-right: auto;
-		}
-	}
-	.nav_link:nth-child(5) {
-		margin-top: 15px;
-		@include small {
-			margin: 0;
-		}
-	}
-	.nav_link:nth-child(6) {
-		border-radius: 20px;
-		background-color: $gold;
-		padding: 3px 20px;
-	}
-	.nav_link:nth-child(6):hover {
-		background-color: #000000;
-	}
+  min-height: 50px;
+  background-color: $black;
+  .nav_link {
+    @include font1;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+  }
+  .container {
+    min-height: inherit;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 3vw;
+    gap: 2vw;
+    @include small {
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+    }
+  }
+  .nav_link:nth-child(1) {
+    margin-bottom: 10px;
+    @include small {
+      margin: 0;
+      margin-right: auto;
+    }
+  }
+  .nav_link:nth-child(5) {
+    margin-top: 15px;
+    @include small {
+      margin: 0;
+    }
+  }
+  .nav_link:nth-child(6) {
+    border-radius: 20px;
+    background-color: $gold;
+    padding: 3px 20px;
+  }
+  .nav_link:nth-child(6):hover {
+    background-color: #000000;
+  }
 }
 header {
-	background-color: $dark;
-	min-height: 700px;
+  background-color: $dark;
+  min-height: 700px;
 
-	.container {
-		flex-flow: column nowrap;
-		text-align: center;
-		justify-content: center;
-		gap: 10vw;
-		min-height: inherit;
-		padding: 15vw 3vw;
-		@include medium {
-			flex-flow: row nowrap;
-			align-items: stretch;
-			text-align: left;
-			justify-content: space-between;
-			gap: 2vw;
-		}
-		h1 {
-			@include font2;
-			color: white;
-			span {
-				color: $gold;
-			}
-			line-height: 1;
-		}
-		& > div {
-			padding: 0 2vw;
-			&.flex {
-				flex-flow: column nowrap;
-				justify-content: space-around;
-				align-items: center;
-				gap: 5vw;
-				@include medium {
-					flex-basis: 90em;
-					gap: 2vw;
-					align-items: flex-start;
-					justify-content: center;
-				}
-			}
-			p {
-				@include font3;
-				color: white;
-			}
-			a {
-				@include font4;
-				text-decoration: none;
-				color: white;
-				border-radius: 20px;
-				background-color: $gold;
-				padding: 3px 40px;
-				display: inline-block;
-				width: auto;
-				// max-width: 350px;
-				text-transform: uppercase;
-			}
-			a:hover {
-				background-color: $black;
-			}
-		}
-	}
+  .container {
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+    gap: 10vw;
+    min-height: inherit;
+    padding: 15vw 3vw;
+    @include medium {
+      flex-flow: row nowrap;
+      align-items: stretch;
+      text-align: left;
+      justify-content: space-between;
+      gap: 2vw;
+    }
+    h1 {
+      @include font2;
+      color: white;
+      span {
+        color: $gold;
+      }
+      line-height: 1;
+    }
+    & > div {
+      padding: 0 2vw;
+      &.flex {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5vw;
+        @include medium {
+          flex-basis: 90em;
+          gap: 2vw;
+          align-items: flex-start;
+          justify-content: center;
+        }
+      }
+      p {
+        @include font3;
+        color: white;
+      }
+      a {
+        @include font4;
+        text-decoration: none;
+        color: white;
+        border-radius: 20px;
+        background-color: $gold;
+        padding: 3px 40px;
+        display: inline-block;
+        width: auto;
+        // max-width: 350px;
+        text-transform: uppercase;
+      }
+      a:hover {
+        background-color: $black;
+      }
+    }
+  }
 }
 section.benefits {
-	background-color: #f0f0f0;
-	padding: 50px 0;
-	.container {
-		flex-flow: column nowrap;
-		align-items: center;
-		gap: 5vw;
-		padding: 0 5vw;
-		@include medium {
-			flex-flow: row nowrap;
-		}
-	}
-	.benefit {
-		text-align: center;
-		max-width: 60%;
-		h3 {
-			@include font5;
-			color: $gold;
-			margin-bottom: 10px;
-		}
-		p {
-			@include font5p;
-			color: $dark;
-		}
-	}
+  background-color: #f0f0f0;
+  padding: 50px 0;
+  .container {
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 5vw;
+    padding: 0 5vw;
+    @include medium {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0 3vw;
+    }
+  }
+  .benefit {
+    text-align: center;
+    max-width: 60%;
+    h3 {
+      @include font5;
+      color: $gold;
+      margin-bottom: 10px;
+    }
+    p {
+      @include font5p;
+      color: $dark;
+    }
+  }
 }
 section.main {
-	background-color: white;
-	.container {
-		flex-flow: column nowrap;
-		align-items: center;
-		padding: 20px 5vw 30px 5vw;
-		.description {
-			padding: 30px 0;
-			h3 {
-				@include font6;
-				color: $gold;
-				margin-bottom: 15px;
-			}
-			p {
-				@include font6p;
-				color: $dark;
-			}
-			img {
-				width: 100%;
-				margin: 10px 0;
-			}
-		}
-		.stuff {
-			flex-flow: column nowrap;
-			align-items: center;
-			gap: 5vw;
-			padding: 40px 0;
-			@include small {
-				flex-flow: row nowrap;
-				align-items: stretch;
-				justify-content: space-around;
-				padding: 20px 0;
-				gap: 3vw;
-			}
-			.st {
-				background-color: $black;
-				text-align: center;
-				padding: 50px;
-				width: 65%;
-				@include small {
-					padding: 30px;
-				}
-				h3 {
-					@include font7;
-					color: white;
-					margin-bottom: 15px;
-					line-height: 1;
-				}
-				p {
-					@include font7p;
-					color: white;
-				}
-			}
-		}
-	}
+  background-color: white;
+  .container {
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px 5vw 30px 5vw;
+    @include medium {
+      padding: 20px 3vw 30px 3vw;
+    }
+    .description {
+      padding: 30px 0;
+      h3 {
+        @include font6;
+        color: $gold;
+        margin-bottom: 15px;
+      }
+      p {
+        @include font6p;
+        color: $dark;
+      }
+      img {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+    .stuff {
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 5vw;
+      padding: 40px 0;
+      @include small {
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-around;
+        padding: 20px 0;
+        gap: 3vw;
+      }
+      .st {
+        background-color: $black;
+        text-align: center;
+        padding: 50px;
+        width: 65%;
+        @include small {
+          padding: 30px;
+        }
+        h3 {
+          @include font7;
+          color: white;
+          margin-bottom: 15px;
+          line-height: 1;
+        }
+        p {
+          @include font7p;
+          color: white;
+        }
+      }
+    }
+  }
 }
 footer {
-	background-color: $black;
-	padding: 50px 0;
-	.container {
-		flex-flow: column nowrap;
-		align-items: center;
-		padding: 0 4vw;
-		h3 {
-			@include font8;
-			color: white;
-			margin-bottom: 60px;
-			text-align: center;
-		}
-		.footer-cols {
-			flex-flow: column nowrap;
-			align-items: center;
-			@include medium {
-				flex-flow: row nowrap;
-				align-items: flex-start;
-				justify-content: flex-end;
-				gap: 1vw;
-				.footer-col:nth-child(1) {
-					flex-basis: 55em;
-					margin-right: 5vw;
-				}
-				.footer-col {
-					align-items: flex-start !important;
-					p,
-					h3 {
-						text-align: left !important;
-					}
-				}
-			}
+  background-color: $black;
+  padding: 50px 0;
+  .container {
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0 4vw;
+    @include medium {
+      padding: 0 3vw;
+    }
+    h3 {
+      @include font8;
+      color: white;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .footer-cols {
+      flex-flow: column nowrap;
+      align-items: center;
+      @include medium {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 1vw;
+        .footer-col:nth-child(1) {
+          flex-basis: 55em;
+          margin-right: 5vw;
+        }
+        .footer-col {
+          align-items: flex-start !important;
+          p,
+          h3 {
+            text-align: left !important;
+          }
+        }
+      }
 
-			.footer-col {
-				flex-flow: column nowrap;
-				align-items: center;
-				margin-bottom: 20px;
-				width: 50%;
-				h4 {
-					@include font9;
-					color: $gold;
-					margin-bottom: 20px;
-				}
-				p {
-					@include font9p;
-					color: #f0f0f0;
-					margin-bottom: 20px;
-					text-align: center;
-				}
-			}
-		}
-	}
+      .footer-col {
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 50%;
+        h4 {
+          @include font9;
+          color: $gold;
+          margin-bottom: 20px;
+        }
+        p {
+          @include font9p;
+          color: #f0f0f0;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

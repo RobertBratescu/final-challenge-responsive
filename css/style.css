@@ -104,7 +104,7 @@ nav {
 }
 
 nav .nav_link {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -208,7 +208,7 @@ header .container {
 }
 
 header .container h1 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 90px;
   font-weight: bold;
   color: white;
@@ -251,14 +251,14 @@ header .container > div.flex {
 }
 
 header .container > div p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 24px;
   font-weight: 400;
   color: white;
 }
 
 header .container > div a {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -298,6 +298,10 @@ section.benefits .container {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 3vw;
   }
 }
 
@@ -307,7 +311,7 @@ section.benefits .benefit {
 }
 
 section.benefits .benefit h3 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 30px;
   font-weight: bold;
   color: #a59678;
@@ -315,7 +319,7 @@ section.benefits .benefit h3 {
 }
 
 section.benefits .benefit p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 400;
   color: #3b4050;
@@ -336,12 +340,18 @@ section.main .container {
   padding: 20px 5vw 30px 5vw;
 }
 
+@media screen and (min-width: 1000px) {
+  section.main .container {
+    padding: 20px 3vw 30px 3vw;
+  }
+}
+
 section.main .container .description {
   padding: 30px 0;
 }
 
 section.main .container .description h3 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 36px;
   font-weight: bold;
   color: #a59678;
@@ -349,7 +359,7 @@ section.main .container .description h3 {
 }
 
 section.main .container .description p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 21px;
   font-weight: 400;
   color: #3b4050;
@@ -402,7 +412,7 @@ section.main .container .stuff .st {
 }
 
 section.main .container .stuff .st h3 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -411,7 +421,7 @@ section.main .container .stuff .st h3 {
 }
 
 section.main .container .stuff .st p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 400;
   color: white;
@@ -433,8 +443,14 @@ footer .container {
   padding: 0 4vw;
 }
 
+@media screen and (min-width: 1000px) {
+  footer .container {
+    padding: 0 3vw;
+  }
+}
+
 footer .container h3 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 50px;
   font-weight: bold;
   color: white;
@@ -495,7 +511,7 @@ footer .container .footer-cols .footer-col {
 }
 
 footer .container .footer-cols .footer-col h4 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 21px;
   font-weight: bold;
   color: #a59678;
@@ -503,7 +519,7 @@ footer .container .footer-cols .footer-col h4 {
 }
 
 footer .container .footer-cols .footer-col p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 16px;
   font-weight: 400;
   color: #f0f0f0;
